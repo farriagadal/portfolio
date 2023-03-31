@@ -20,9 +20,9 @@ yarn dev
 
 ## Tasks
 
-- [ ] Instalar Styled Components
+- [ X ] Instalar Styled Components
 - [ ] Instalar Fonts
-- [ ] Configurar Eslint
+- [ X ] Configurar Eslint
 - [ ] Comprar domino *seedlab.cl*
 
 ## Final Tasks
