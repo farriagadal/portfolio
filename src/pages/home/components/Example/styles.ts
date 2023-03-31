@@ -5,8 +5,7 @@ export const Container = styled.div`
   margin: auto;
   padding-top: 70px;
   padding-bottom: 120px;
-  color: white;
-  /* background: black; */
+  color: var(--color-3);  /* background: black; */
 
   @media only screen and (max-width: 765px) {
     padding-left: 20px;

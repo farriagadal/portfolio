@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  color: white;
-  //
+  color: var(--color-3);  //
   position: relative;
   margin-top: 175px;
-  background: linear-gradient(100.79deg, #23D4AA 6.96%, #021720 98.01%);
+  background: linear-gradient(100.79deg, var(--color-2) 6.96%, var(--color-1) 98.01%);
   max-width: calc(100vw - ((100vw - var(--container-width)) / 2));
   margin-left: calc((100vw - var(--container-width)) / 2);
   padding-top: 92px;
@@ -18,6 +17,8 @@ export const Container = styled.div`
     padding-left: 33px;
     padding-bottom: 72px;
     border-top-left-radius: 90px;
+    margin-left: 20px;
+    margin-top: 76px;
   }
 
   p {
@@ -27,20 +28,27 @@ export const Container = styled.div`
     letter-spacing: 0.04em;
     max-width: 494px;
     opacity: 0.7;
+    @media only screen and (max-width: 765px) {
+      padding-right: 20px;
+    }
   }
 
   h1 {
     margin-top: 38px;
     margin-bottom: 40px;
     max-width: 565px;
+    font-size: 80px;
+    line-height: 100%;
+    overflow-wrap: anywhere;
+    font-size: 57px;
 
-    /* @media only screen and (max-width: 765px) {
-
-    } */
+    @media only screen and (max-width: 765px) {
+      padding-right: 20px;
+    }
 
     &::after {
       content: '.';
-      color: #021720;
+      color: var(--color-1);
     }
   }
 
@@ -82,11 +90,25 @@ export const BgImg = styled.div<BgImgProps>`
   right: calc((99vw - var(--container-width)) / 2);
   border-top-left-radius: 110px;
   border-bottom-right-radius: 110px;
-  background: #021720;
+  background: var(--color-1);
   box-shadow: 0px 30px 100px rgba(18, 7, 35, 0.3);
 
   @media only screen and (max-width: 765px) {
     display: none;
+  }
+
+  &:after {
+    content: '';
+    display: ${props => props.show ? 'block' : 'none'};
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    animation: opacityless linear 5s;
+    opacity: 0.5;
+    background: linear-gradient(44deg,rgb(1 24 34 / 26%) 0%,var(--color-1) 100%);
+    z-index: 1;
   }
 
   img {
@@ -94,6 +116,15 @@ export const BgImg = styled.div<BgImgProps>`
     animation: expand linear 12s;
     display: ${props => props.show ? 'block' : 'none'};
     transform: scale(1.2);
+  }
+
+  @keyframes opacityless {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
   }
 
   @keyframes expand {
@@ -109,7 +140,7 @@ export const BgImg = styled.div<BgImgProps>`
   }
 `
 
-export const ArrowDown = styled.button`
+export const ArrowDown = styled.a`
   position: relative;
   background: none;
   border: none;

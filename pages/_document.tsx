@@ -15,10 +15,10 @@ export default class Document extends NextDocument {
       return {
         ...initialProps,
         styles: (
-          <>
+          <div style={{scrollBehavior:'smooth'}}>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
+          </div>
         )
       }
     } finally {

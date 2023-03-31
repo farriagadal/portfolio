@@ -10,14 +10,14 @@ const Heading = () => {
   return (
     <>
       <Container>
-        <label>Con SEEDLAB Lograrás</label>
+        <label>Portafolio Web</label>
         <Splide aria-label="My Favorite Images"
           options={{
             type: 'fade',
             arrows: false,
             pagination: false,
             autoplay: true,
-            interval: 6000,
+            interval: 10000,
             rewind: true,
             pauseOnHover: false
           }}
@@ -26,18 +26,18 @@ const Heading = () => {
           }}
         >
           <SplideSlide>
-            <h1>Presencia Digital</h1>
-            <p>Nos especializamos en la definición y ejecución de proyectos digitales disruptivos con alto impacto en las organizaciones.</p>
-            <BgImg show={imageId === 0}><Image src='/images/heading-bg.jpg' alt="Seedlab Fondo" fill /></BgImg>
+            <h1>Full-Stack Developer</h1>
+            <p>Software Engineer con +5 años de experiencia en el campo; +5 años en desarrollo Front-End con Typescript y Javascript (React.js, Vue.js y Angular); +2 años en desarrollo Back-End con tecnologías como Node.js y Python.</p>
+            <BgImg show={imageId === 0}><Image src='/images/graficos.jpg' alt="Seedlab Fondo" fill /></BgImg>
           </SplideSlide>
           <SplideSlide>
-            <h1>Mejorar tu negocio</h1>
-            <p>Nos especializamos en la definición y ejecución de proyectos digitales disruptivos con alto impacto en las organizaciones.</p>
-            <BgImg show={imageId === 1}><Image src='/images/marketing.jpg' alt="Seedlab Fondo" fill /></BgImg>
+            <h1>Front-End Developer</h1>
+            <p>Software Engineer con +5 años de experiencia en el campo; +5 años en desarrollo Front-End con Typescript y Javascript (React.js, Vue.js y Angular); +2 años en desarrollo Back-End con tecnologías como Node.js y Python.</p>
+            <BgImg show={imageId === 1}><Image src='/images/frontend.jpg' alt="Frontend" fill /></BgImg>
           </SplideSlide>
         </Splide>
       </Container>
-      <ArrowDown>
+      <ArrowDown href="/#techs">
         <Image src='/icons/arrow-down.svg' alt="Arrow Down" fill />
       </ArrowDown>
     </>
