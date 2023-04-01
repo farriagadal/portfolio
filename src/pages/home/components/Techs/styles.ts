@@ -8,7 +8,7 @@ export const Container = styled.div<ContainerProps>`
   max-width: var(--container-width);
   margin: auto;
   color: var(--color-3);
-  padding: 120px 0 120px 0;
+  padding: 120px 0 250px 0;
   opacity: ${(props) => (props.isActive ? '1' : '0')};
   transform: ${(props) => (props.isActive ? 'translateY(0px)' : 'translateY(250px)')};
   transition: all 0.4s linear;
@@ -25,6 +25,7 @@ export const Container = styled.div<ContainerProps>`
 export const Text = styled.div`
   max-width: 600px;
   align-self: center;
+  z-index: 1;
 
   @media only screen and (max-width: 765px) {
     margin-bottom: 60px;
@@ -38,23 +39,6 @@ export const Text = styled.div`
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-2);
-
-    &:before {
-      content: '';
-      left: calc((var(--container-width) - 100vw)/2);
-      width: calc((100vw - var(--container-width))/2 - 30px);
-      border-bottom: solid 1px;
-      margin-top: 10px;
-      position: absolute;
-      opacity: 0.3;
-
-      @media only screen and (max-width: 765px) {
-        text-align: left;
-        left: auto;
-        right: 0;
-        width: calc(100vw - 190px);
-      }
-    }
   }
 
 
@@ -76,11 +60,16 @@ export const Text = styled.div`
 export const List = styled.div`
   margin-left: auto;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   column-gap: 30px;
   row-gap: 30px;
   transition: all 0.4s linear;
-  max-width: 570px;
+  /* max-width: 570px; */
+  transform: rotate3d(-17, 10, 15, 70deg);
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* opacity: 0.5; */
 
   @media only screen and (max-width: 765px) {
     column-gap: 24px;
@@ -94,11 +83,24 @@ export const Tech = styled.div`
   height: 125px;
   background: var(--color-3);
   border-radius: 30px 0px;
+  opacity: 0.2;
+  transition: all 0.4s linear;
+  cursor: pointer;
+
+  &:hover, &:nth-child(2), &:nth-child(11) {
+    opacity: 1;
+    transform: scale(1.1) translateZ(100px);
+  }
 
   @media only screen and (max-width: 765px) {
     width: 100%;
     height: 100px;
   }
+
+  /* &:nth-child(2n) {
+    grid-row-end: 1 2;
+    grid-column-end: 1 2;
+  } */
 
   img {
     max-height: 83px;

@@ -118,3 +118,23 @@ a {
     --container-width: calc(100vw);
   }
 }
+
+pre {
+  background-color: #263238;
+  box-shadow: rgba(0,0,0,.55) 0 3px 13px;
+  padding: 33px;
+  border-radius: 8px;
+  font-family: monospace! important;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 25px;
+  white-space: pre-wrap;
+}
+
+pre b {
+  color: #ffcd01;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 25px;
+  white-space: pre-wrap;
+}

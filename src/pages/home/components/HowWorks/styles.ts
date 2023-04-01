@@ -42,7 +42,7 @@ export const Container = styled.div<ContainerProps>`
       border-bottom: solid 1px;
       margin-top: 10px;
       position: absolute;
-      opacity: 0.3;
+      /* opacity: 0.3; */
 
       @media only screen and (max-width: 765px) {
         text-align: left;

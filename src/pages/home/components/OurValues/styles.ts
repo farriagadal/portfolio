@@ -67,6 +67,7 @@ export const BgImg = styled.div<BgImgProps>`
     object-fit: cover;
     transform: ${(props) => (props.isActive ? 'scale(1)' : 'scale(1.2)')};
     transition: all 0.8s linear;
+    cursor: pointer;
 
     @media only screen and (max-width: 765px) {
       transform: scale(1);
@@ -128,5 +129,6 @@ export const Text = styled.div<TextProps>`
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 0.04em;
+    cursor: pointer;
   }
 `

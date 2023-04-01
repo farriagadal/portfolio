@@ -14,14 +14,20 @@ const OurValues = () => {
   }, [])
 
   return (
-    <Section id="ourvalues" isActive={isShow || isHover} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+    <Section id="ourvalues" isActive={isHover}>
       <Container>
-        <BgImg isActive={isShow || isHover}><Image src='/images/profile2.jpg' alt="Seedlab Fondo" fill /></BgImg>
-        <Text isActive={isShow || isHover}>
+        <BgImg isActive={isHover}>
+          <Image src='/images/profile2.jpg' alt="Seedlab Fondo" fill onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} />
+        </BgImg>
+        <Text isActive={isHover}>
           <label id="ourvalues-label">¿Quién soy?</label>
-          <h2>Apasionado por buscar soluciones tecnológicas</h2>
-          <p>Software Engineer con +5 años de experiencia en el campo; +5 años en desarrollo Front-End con Typescript y Javascript (React.js, Vue.js y Angular); +2 años en desarrollo Back-End con tecnologías como Node.js y Python.
-            <br />Motivado por la creación de soluciones IT, aspiro siempre al desarrollo personal tanto humano como profesional, mejorando día a día mis cualidades, metodologías y buenas prácticas.
+          <h2>Eterno Aprendiz</h2>
+          <p onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+            <pre>He participado en diversos proyectos, abarcando desde el desarrollo de <b>Aplicaciones Web</b> a <b>Aplicaciones Móviles</b>.
+              <br />Me enorgullece proporcionar soluciones de <b>excelencia</b> y constantemente busco maneras de perfeccionar mi trabajo.
+              Me gustan los <b>emprendimientos</b>, estoy siempre atento a oportunidades que me permitan <b>innovar</b> y <b>desarrollar</b> soluciones eficaces.
+              Mi <b>meta</b> es construir una <b>Start-Up</b> que contribuya positivamente a nuestra sociedad. 🚀
+            </pre>
           </p>
         </Text>
       </Container>

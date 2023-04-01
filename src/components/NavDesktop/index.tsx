@@ -45,7 +45,7 @@ const NavDesktop = () => {
       <Link href="/contacto">
         <ContactBtn>
           <Image src='/icons/contact-icon.svg' alt="Contact Icon" width={16} height={16} />
-          <span>Contacto</span>
+          <span>Contactame</span>
         </ContactBtn>
       </Link>
 
