@@ -163,8 +163,8 @@ export const ArrowDown = styled.a`
   cursor: pointer;
   width: 45px;
   height: 45px;
-  margin: auto;
-  margin-top: 45px;
+  margin: -100px auto 150px auto;
+
   display: block;
 
   img {

@@ -1,20 +1,34 @@
 import React, { useState, useEffect } from 'react'
 
 type TextAnimationProps = {
-  phrases: string[]
+  phrases: string[],
+  typingSpeed: number,
+  backspaceDelay: number,
+  eraseDelay: number,
+  timeComplete?: number,
+  errorProbability: number,
 }
 
-const TextAnimation = ({ phrases }: TextAnimationProps) => {
+const TextAnimation = ({
+  phrases,
+  typingSpeed,
+  backspaceDelay,
+  eraseDelay,
+  errorProbability,
+  timeComplete = 3000
+}: TextAnimationProps) => {
   const [text, setText] = useState('')
+  const [changePhrase, setChangePhrase] = useState(1)
   const [phraseId, setPhraseId] = useState(0)
 
   const onPhraseComplete = () => {
     setTimeout(async () => {
       await eraseText()
       setTimeout(() => {
+        setChangePhrase(changePhrase + 1)
         setPhraseId(phraseId === phrases.length - 1 ? 0 : phraseId + 1)
-      }, 1000)
-    }, 3000)
+      }, eraseDelay)
+    }, timeComplete)
   }
 
   const eraseText = () => {
@@ -27,7 +41,7 @@ const TextAnimation = ({ phrases }: TextAnimationProps) => {
           clearInterval(timer)
           resolve()
         }
-      }, 100)
+      }, backspaceDelay)
     })
   }
 
@@ -36,14 +50,14 @@ const TextAnimation = ({ phrases }: TextAnimationProps) => {
     let timer: NodeJS.Timeout
 
     const getRandomTimeout = () => {
-      const lambda = 1 / 200 // Parámetro de la distribución exponencial (1 / valor esperado)
+      const lambda = 1 / typingSpeed
       const randomValue = Math.random()
       const timeout = -Math.log(1 - randomValue) / lambda
-      return Math.min(timeout, 200) // Limitamos el tiempo máximo a 400 ms
+      return Math.min(timeout, 200)
     }
 
     const animateText = () => {
-      const shouldBackspace = Math.random() < 0.2 && count > 0
+      const shouldBackspace = Math.random() < errorProbability && count > 0 // Modificado para utilizar el nuevo parámetro errorProbability
       if (shouldBackspace) {
         count--
       } else {
@@ -51,28 +65,19 @@ const TextAnimation = ({ phrases }: TextAnimationProps) => {
         count++
       }
       if (count === phrases[phraseId].length + 1) {
-        onPhraseComplete() // Ejecuta la función onPhraseComplete cuando la frase esté completa
+        onPhraseComplete()
         clearInterval(timer)
       } else {
-        const timeout = getRandomTimeout() // Utiliza la función para obtener un tiempo aleatorio
+        const timeout = getRandomTimeout()
         timer = setTimeout(animateText, timeout)
       }
     }
 
     timer = setTimeout(animateText, 100)
     return () => clearTimeout(timer)
-  }, [phrases[phraseId]])
+  }, [changePhrase])
 
   return <>{text}</>
 }
 
 export default TextAnimation
-
-function setText(arg0: any) {
-  throw new Error('Function not implemented.')
-}
-
-
-function onPhraseComplete() {
-  throw new Error('Function not implemented.')
-}

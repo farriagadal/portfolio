@@ -39,6 +39,7 @@ export const Text = styled.div`
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-2);
+    text-shadow: 0px 0px 1px #ff0000;
   }
 
 

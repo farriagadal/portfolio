@@ -13,10 +13,16 @@ const Heading = () => {
           Bienvenido
         </h1>
         <div>
-          <h3><b><TextAnimation phrases={['<Full-Stack Developer>', '<Front-End Developer>', '<Software Engineer>']} /></b> </h3>
           <p><pre>
-            Hola!, soy <b>Fernando Arriagada</b> de Chile, Ingeniero de Software con 5+ años de experiencia en desarrollo <b>Front-End</b> (React, Vue, Angular) y 3+ años en <b>Back-End</b> (Node.js, Python).
+            <TextAnimation
+              typingSpeed={100}
+              backspaceDelay={100}
+              eraseDelay={1000}
+              errorProbability={0.2}
+              phrases={['Hola!, soy <b>Fernando Arriagada</b> de Chile, Ingeniero de Software con 5+ años de experiencia en desarrollo <b>Front-End</b> (React, Vue, Angular) y 3+ años en <b>Back-End</b> (Node.js, Python).']}
+            />
           </pre></p>
+          
         </div>
         <BgImgShadow src="images/animacion.svg" />
         <BgImg src="images/animacion.svg" />

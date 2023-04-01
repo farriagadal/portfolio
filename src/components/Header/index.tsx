@@ -11,6 +11,17 @@ const Header = () => {
     setIsMobile(window.innerWidth < 1300)
     setIsReady(true)
   }, [])
+
+  // const routes = [
+  //   { name: 'Inicio', href: '/' },
+  //   { name: 'Sobre mí', href: '/about' },
+  //   { name: 'Proyectos', href: '/projects' },
+  //   { name: 'Contacto', href: '/contact' },
+  // ]
+
+  // <MenuOption><a href="/#ourvalues">¿Quien soy?</a></MenuOption>
+  // <MenuOption><a href="/#techs">Tecnologías</a></MenuOption>
+  // <MenuOption><Link href="/contacto">Contacto</Link></MenuOption>
   
   return (
     <>
