@@ -28,7 +28,7 @@ const Heading = () => {
         <BgImg src="images/animacion.svg" />
         <BgImg2 src="images/animacion.svg" />
       </Container>
-      <ArrowDown href="/#techs">
+      <ArrowDown href="/#ourvalues" id="ourvalues" > 
         <Image src='/icons/arrow-down.svg' alt="Arrow Down" fill />
       </ArrowDown>
     </>

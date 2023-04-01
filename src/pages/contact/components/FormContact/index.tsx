@@ -1,30 +1,9 @@
 import { Container, BtnContact, Fields } from './styles'
 import { useForm } from 'react-hook-form'
 import InputText from '../InputText'
-import IconWeb1 from 'public/icons/web.svg'
-import IconWeb2 from 'public/icons/software-icon.svg'
-import IconWeb3 from 'public/icons/phone.svg'
-import IconWeb4 from 'public/icons/chat.svg'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import emailjs from 'emailjs-com'
-
-const cardServices = [
-  {
-    title: 'Sitios web corporativos',
-    Icon: IconWeb1
-  },
-  {
-    title: 'Software a medida (SAAS)',
-    Icon: IconWeb2  },
-  {
-    title: 'Aplicaciones móviles',
-    Icon: IconWeb3  },
-  {
-    title: 'Asesoría en tecnología',
-    Icon: IconWeb4
-  }
-]
 
 const FormContact = () => {
   const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'all', reValidateMode: 'onChange', })

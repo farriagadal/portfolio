@@ -14,7 +14,7 @@ const OurValues = () => {
   }, [])
 
   return (
-    <Section id="ourvalues" isActive={isHover}>
+    <Section isActive={isHover}>
       <Container>
         <BgImg isActive={isHover}>
           <Image src='/images/profile2.jpg' alt="Seedlab Fondo" fill onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} />
