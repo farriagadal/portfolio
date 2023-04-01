@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import NavDesktop from '../NavDesktop'
 import NavMobile from '../NavMobile'
@@ -10,6 +9,16 @@ const Header = () => {
   useEffect(() => {
     setIsMobile(window.innerWidth < 1300)
     setIsReady(true)
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1300)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   const routes = [

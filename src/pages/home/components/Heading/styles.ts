@@ -13,7 +13,7 @@ export const Container = styled.div`
   position: relative;
 
   @media only screen and (max-width: 765px) {
-    padding-top: 78px;
+    padding-top: 25px;
     padding-left: 0;
     padding-bottom: 72px;
     border-top-left-radius: 90px;
@@ -98,10 +98,6 @@ export const Container = styled.div`
       margin-left: 32px;
       opacity: 0.3;
     }
-  }
-
-  .splide__track {
-    overflow: initial;
   }
 `
 

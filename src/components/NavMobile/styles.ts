@@ -11,7 +11,6 @@ export const Container = styled.div`
 `
 export const Isotipo = styled.div`
 
-
   h2 {
     margin-left: 20px;
     margin-top: 45px;

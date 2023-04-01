@@ -13,9 +13,10 @@ export const Container = styled.div<ContainerProps>`
   transform: ${(props) => (props.isActive ? 'translateY(0px)' : 'translateY(250px)')};
   transition: all 0.4s linear;
   display: flex;
-  overflow: hidden;
+
 
   @media only screen and (max-width: 765px) {
+    overflow: hidden;
     display: block;
     padding: 0px 20px 120px 20px;
     opacity: 1;
