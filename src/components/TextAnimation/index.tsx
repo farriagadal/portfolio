@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import sanitizeHtml from 'sanitize-html'
 
 type TextAnimationProps = {
   phrases: string[],
@@ -7,6 +8,7 @@ type TextAnimationProps = {
   eraseDelay: number,
   timeComplete?: number,
   errorProbability: number,
+  isSecure?: boolean,
 }
 
 const TextAnimation = ({
@@ -15,7 +17,8 @@ const TextAnimation = ({
   backspaceDelay,
   eraseDelay,
   errorProbability,
-  timeComplete = 3000
+  timeComplete = 3000,
+  isSecure = true,
 }: TextAnimationProps) => {
   const [text, setText] = useState('')
   const [changePhrase, setChangePhrase] = useState(1)
@@ -79,8 +82,9 @@ const TextAnimation = ({
 
   return (
     <div
+      style={{ fontFamily: 'inherit' }}
       dangerouslySetInnerHTML={{
-        __html: text,
+        __html: isSecure ? sanitizeHtml(text) : text,
       }}
     />
   )
