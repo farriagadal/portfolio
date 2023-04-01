@@ -5,7 +5,15 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 
-const NavMobile = () => {
+type NavMobileProps = {
+  routes: {
+    name: string
+    href: string
+    external?: boolean
+  }[]
+}
+
+const NavMobile = ({ routes }: NavMobileProps) => {
   const [open, setOpen] = useState(false)
   const router = useRouter()
 
@@ -27,20 +35,12 @@ const NavMobile = () => {
         open && (
           <MenuList>
             {
-              router.pathname === '/' ?
-                <>
-                  <a href="/#techs">Stacks</a>
-                  <a href="/#ourvalues">¿Quien soy?</a>
-                  <a href="/#content">Experiencia</a>
-                </>
-                :
-                <>
-                  <Link href="/#techs">Stacks</Link>
-                  <Link href="/#ourvalues">¿Quien soy?</Link>
-                  <Link href="/#content">Experiencia</Link>
-                </>
+              routes.map((route, index) => (
+                route.external && router.pathname === '/'
+                  ? <a key={index} href={ route.href }>{ route.name }</a>
+                  : <Link key={index} href={ route.href }>{ route.name }</Link>
+              ))
             }
-  
             <Link href="/contacto"><ContactBtn>
               <span>Trabajemos juntos!</span>
               <Image src='/icons/contact-icon.svg' alt="Contact Icon" width={16} height={16} />

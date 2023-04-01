@@ -5,7 +5,15 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-const NavDesktop = () => {
+type NavDesktopProps = {
+  routes: {
+    name: string
+    href: string
+    external?: boolean
+  }[]
+}
+
+const NavDesktop = ({ routes }: NavDesktopProps) => {
   const [isTop, setIsTop] = useState(true)
   const router = useRouter()
 
@@ -27,18 +35,15 @@ const NavDesktop = () => {
             <h2 className='short-logo'><span>F.</span> Arriagada</h2>
           </Link> </Logo>
           {
-            router.pathname === '/' ? 
-              <>
-                <MenuOption><a href="/#ourvalues">¿Quien soy?</a></MenuOption>
-                <MenuOption><a href="/#techs">Tecnologías</a></MenuOption>
-                <MenuOption><Link href="/contacto">Contacto</Link></MenuOption>
-              </>
-              :
-              <>
-                <MenuOption><Link href="/#ourvalues">¿Quien soy?</Link></MenuOption>
-                <MenuOption><Link href="/#techs">Tecnologías</Link></MenuOption>
-                <MenuOption><Link href="/contacto">Contacto</Link></MenuOption>
-              </>
+            routes.map((route, index) => (
+              <MenuOption key={index}>
+                {
+                  route.external && router.pathname === '/'
+                    ? <a href={ route.href }>{ route.name }</a>
+                    : <Link href={ route.href }>{ route.name }</Link>
+                }
+              </MenuOption>
+            ))
           }
         </nav>
       </Container>
