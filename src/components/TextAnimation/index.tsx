@@ -77,7 +77,13 @@ const TextAnimation = ({
     return () => clearTimeout(timer)
   }, [changePhrase])
 
-  return <>{text}</>
+  return (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: text,
+      }}
+    />
+  )
 }
 
 export default TextAnimation
