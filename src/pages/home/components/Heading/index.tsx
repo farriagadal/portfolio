@@ -19,7 +19,7 @@ const Heading = () => {
               backspaceDelay={10}
               eraseDelay={1000}
               errorProbability={0}
-              phrases={['Hola!, soy <b>Fernando Arriagada</b> de Chile, Ingeniero de Software con 5+ años de experiencia en desarrollo <b>Front-End</b> (React, Vue, Angular) y 3+ años en <b>Back-End</b> (Node.js, Python).']}
+              phrases={['Hola👋, soy <b>Fernando Arriagada</b> de Chile, Ingeniero de Software 👨‍💻 con 5+ años de experiencia en desarrollo <b>Front-End</b> (React, Vue, Angular) y 3+ años en <b>Back-End</b> (Node.js, Python).']}
             />
           </pre></p>
           
