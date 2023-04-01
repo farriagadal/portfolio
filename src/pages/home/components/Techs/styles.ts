@@ -13,6 +13,7 @@ export const Container = styled.div<ContainerProps>`
   transform: ${(props) => (props.isActive ? 'translateY(0px)' : 'translateY(250px)')};
   transition: all 0.4s linear;
   display: flex;
+  overflow: hidden;
 
   @media only screen and (max-width: 765px) {
     display: block;
@@ -26,9 +27,12 @@ export const Text = styled.div`
   max-width: 600px;
   align-self: center;
   z-index: 1;
+  position: relative;
 
   @media only screen and (max-width: 765px) {
     margin-bottom: 60px;
+    max-width: 100%;
+    padding: 100px 0;
   }
 
   label {
@@ -75,6 +79,9 @@ export const List = styled.div`
   @media only screen and (max-width: 765px) {
     column-gap: 24px;
     row-gap: 26px;
+    transform: none;
+    width: 120vw;
+    right: -10vw;
   }
 `
 
@@ -88,20 +95,22 @@ export const Tech = styled.div`
   transition: all 0.4s linear;
   cursor: pointer;
 
-  &:hover, &:nth-child(2), &:nth-child(11) {
-    opacity: 1;
-    transform: scale(1.1) translateZ(100px);
-  }
-
   @media only screen and (max-width: 765px) {
     width: 100%;
     height: 100px;
+    opacity: 0.02;
   }
 
-  /* &:nth-child(2n) {
-    grid-row-end: 1 2;
-    grid-column-end: 1 2;
-  } */
+
+  &:hover, &:nth-child(1), &:nth-child(11) {
+    opacity: 1;
+    transform: scale(1.1) translateZ(100px);
+
+    @media only screen and (max-width: 765px) {
+      transform: none;
+      opacity: 0.1;
+    }
+  }
 
   img {
     max-height: 83px;

@@ -18,7 +18,8 @@ export const Section = styled.div<SectionProps>`
     max-height: initial;
     height: initial;
     background: none;
-
+    margin-top: 0px;
+    margin-bottom: 60px;
   }
 `
 
@@ -58,9 +59,11 @@ export const BgImg = styled.div<BgImgProps>`
     transform: translateY(0px);
     max-width: 100%;
     width: 100%;
-    height: 90vw;
+    height: ${(props) => (props.isActive ? '90vw;' : '240px')};
     min-width: 100%;
     margin-bottom: 38px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 
   img {

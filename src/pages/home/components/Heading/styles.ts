@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
   color: var(--color-3);  //
   position: relative;
-  margin-top: 120px;
-  margin-bottom: 200px;
+  margin-top: 170px;
+  margin-bottom: 100px;
   background: linear-gradient(100.79deg, var(--color-2) 6.96%, var(--color-1) 98.01%);
   max-width: calc(100vw - ((100vw - var(--container-width)) / 2));
   margin-left: calc((100vw - var(--container-width)) / 2);
@@ -14,11 +14,15 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 765px) {
     padding-top: 78px;
-    padding-left: 33px;
+    padding-left: 0;
     padding-bottom: 72px;
     border-top-left-radius: 90px;
     margin-left: 20px;
     margin-top: 76px;
+
+    img {
+      display: none;
+    }
   }
 
   p {
@@ -27,13 +31,16 @@ export const Container = styled.div`
     font-size: 18px;
     letter-spacing: 0.04em;
     max-width: 494px;
+    height: 300px;
     @media only screen and (max-width: 765px) {
       padding-right: 20px;
+      max-width: 100%;
+      height: 150px;
     }
   }
 
   h1 {
-    margin-top: 38px;
+    margin-top: 0;
     margin-bottom: 0px;
     max-width: 400px;
     line-height: 100%;
@@ -44,16 +51,16 @@ export const Container = styled.div`
       padding-right: 20px;
     }
 
-    &::after {
-      content: '.';
-      color: var(--color-1);
-    }
-
     b {
       font-family: 'Poppins';
       overflow-wrap: anywhere;
       font-size: 75px;
       line-height: 110%;
+    }
+
+    &::after {
+      content: '.';
+      color: var(--color-2);
     }
   }
 
@@ -81,7 +88,7 @@ export const Container = styled.div`
     color: var(--color-2);
     display: flex;
     white-space: nowrap;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     &::after {
       content: '';
@@ -104,7 +111,7 @@ export const BgImg2 = styled.img`
   width: calc(var(--container-width) / 1.8);
   top: -19%;
   animation: float 7s infinite;
-  margin-top: 100px;
+  margin-top: 60px;
 
   @keyframes float {
     0% {
@@ -126,7 +133,7 @@ export const BgImg = styled.img`
   top: -18%;
   filter: brightness(0.5);
   animation: float 7s infinite;
-  margin-top: 100px;
+  margin-top: 60px;
 `
 
 export const BgImgShadow = styled.img`
@@ -136,7 +143,7 @@ export const BgImgShadow = styled.img`
   top: 00px;
   filter: brightness(0.1) blur(10px) opacity(0.5);
   animation: float-shadow 7s infinite;
-  margin-top: 100px;
+  margin-top: 60px;
 
   @keyframes float-shadow {
     0% {
@@ -154,8 +161,6 @@ export const BgImgShadow = styled.img`
   }
 `
 
-
-
 export const ArrowDown = styled.a`
   position: relative;
   background: none;
@@ -163,13 +168,16 @@ export const ArrowDown = styled.a`
   cursor: pointer;
   width: 45px;
   height: 45px;
-  margin: -100px auto 150px auto;
-
+  margin: -120px auto 150px auto;
   display: block;
 
   img {
     filter: brightness(0) invert(1);
     animation: updown infinite 2s ease-in-out;
+  }
+
+  @media only screen and (max-width: 765px) {
+    margin-bottom: 80px;
   }
 
   @keyframes updown {
