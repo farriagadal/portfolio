@@ -32,6 +32,8 @@
   --color-6: #031821;
   --color-7: #FF004C;
   --color-8: #395B69;
+
+  --breakpoint-mobile: 765px;
 }
 
 :root1 {

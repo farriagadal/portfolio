@@ -41,46 +41,45 @@ const techsCards = [
     alt: 'Docker Logo'
   },
   {
-    img: '/images/node-logo.png',
-    alt: 'Docker Logo'
+    img: '/images/js.png',
+    alt: 'Js Logo'
   },
   {
-    img: '/images/atlassian-logo.jpg',
-    alt: 'atlassian Logo'
+    img: '/images/typescript.jpg',
+    alt: 'typescript Logo'
   },
   {
-    img: '/images/aws-logo.png',
-    alt: 'AWS Logo'
+    img: '/images/vue.png',
+    alt: 'Vue Logo'
   },
   {
-    img: '/images/google-cloud.png',
-    alt: 'Google Cloud Logo'
+    img: '/images/django.png',
+    alt: 'django Logo'
   },
   {
-    img: '/images/docker.png',
-    alt: 'Docker Logo'
+    img: '/images/git.png',
+    alt: 'Git Logo'
   },
   {
-    img: '/images/node-logo.png',
-    alt: 'Docker Logo'
+    img: '/images/mongo.jpg',
+    alt: 'MongoDB Logo'
   },
   {
-    img: '/images/atlassian-logo.jpg',
-    alt: 'atlassian Logo'
+    img: '/images/laravel.png',
+    alt: 'Laravel Logo'
   },
   {
-    img: '/images/aws-logo.png',
-    alt: 'AWS Logo'
+    img: '/images/ga.png',
+    alt: 'GA Logo'
   },
   {
-    img: '/images/google-cloud.png',
-    alt: 'Google Cloud Logo'
+    img: '/images/graphql.png',
+    alt: 'graphql Logo'
   },
   {
-    img: '/images/docker.png',
-    alt: 'Docker Logo'
-  },
-  
+    img: '/images/jest.png',
+    alt: 'jest Logo'
+  }
 ]
 
 
