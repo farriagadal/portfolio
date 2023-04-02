@@ -1,5 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import sanitizeHtml from 'sanitize-html'
+import styled from 'styled-components'
+
+const Bar = styled.span`
+  &:after {
+    content: '|';
+    animation: blink 0.75s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    font-family: auto;
+  }
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+`
 
 type TextAnimationProps = {
   phrases: string[],
@@ -8,7 +29,7 @@ type TextAnimationProps = {
   eraseDelay: number,
   timeComplete?: number,
   errorProbability: number,
-  isSecure?: boolean,
+  isSecure?: boolean
 }
 
 const TextAnimation = ({
@@ -81,7 +102,7 @@ const TextAnimation = ({
   }, [changePhrase])
 
   return (
-    <div
+    <Bar
       style={{ fontFamily: 'inherit' }}
       dangerouslySetInnerHTML={{
         __html: isSecure ? sanitizeHtml(text) : text,
