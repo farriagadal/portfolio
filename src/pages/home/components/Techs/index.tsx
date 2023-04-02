@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Container, List, Tech, Text } from './styles'
+import { useTranslation } from 'react-i18next'
 
 const techsCards = [
   {
@@ -84,6 +85,7 @@ const techsCards = [
 
 
 const Techs = () => {
+  const { t } = useTranslation()
   const [isShow, setIsShow] = useState(false)
   const [isHover, setIsHover] = useState(false)
 
@@ -101,13 +103,13 @@ const Techs = () => {
     <div id="techs" onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
       <Container isActive={isShow || isHover}>
         <Text>
-          <label>Tecnologías</label>
-          <h2>Habilidades & Tecnologías</h2>
-          <p><pre>
-            Tengo habilidades avanzadas en <b>Javascript</b>, <b>Typescript</b>, <b>React.js</b>, <b>Vue.js</b> y <b>Next.js</b>.
-            También tengo experiencia en <b>Angular</b>, <b>Django</b>, <b>MySQL</b>, <b>PostgreSQL</b> y <b>MongoDB</b>.
-            Utilizo herramientas como <b>Git</b>, <b>Trello</b>, <b>Jira</b>, <b>Confluence</b>, <b>Slack</b> y <b>AWS</b>.
-          </pre></p>
+          <label>{t('techs')}</label>
+          <h2>{t('techs_1')}</h2>
+          <p>
+            <pre dangerouslySetInnerHTML={{
+              __html: t('techs_text')
+            }} />
+          </p>
         </Text>
         <List>
           {techsCards.map((card, index) => (

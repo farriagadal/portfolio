@@ -4,6 +4,7 @@ import { Container, Logo, MenuOption, ContactBtn, ThemeButton } from './styles'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'react-i18next'
 
 type NavDesktopProps = {
   routes: {
@@ -14,6 +15,7 @@ type NavDesktopProps = {
 }
 
 const NavDesktop = ({ routes }: NavDesktopProps) => {
+  const { t } = useTranslation()
   const [isTop, setIsTop] = useState(true)
   const router = useRouter()
 
@@ -50,7 +52,7 @@ const NavDesktop = ({ routes }: NavDesktopProps) => {
       <Link href="/contacto">
         <ContactBtn>
           <Image src='/icons/contact-icon.svg' alt="Contact Icon" width={16} height={16} />
-          <span>Contactame</span>
+          <span>{t('contact_me')}</span>
         </ContactBtn>
       </Link>
 

@@ -4,8 +4,11 @@ import InputText from '../InputText'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import emailjs from 'emailjs-com'
+import { useTranslation } from 'react-i18next'
+
 
 const FormContact = () => {
+  const { t } = useTranslation()
   const { register, handleSubmit, formState: { errors } } = useForm({ mode: 'all', reValidateMode: 'onChange', })
   const [isIntialited, setIsIntialited] = useState(false)
   const router = useRouter()
@@ -28,21 +31,21 @@ const FormContact = () => {
 
   return (
     <Container>
-      <h2>Ingresa tus datos</h2>
+      <h2>{t('insert_info')}</h2>
       <form onSubmit={handleSubmit(onSubmit, handleError)}>
         <Fields>
           <InputText
-            label="Nombre*"
+            label={t('name') + '*'}
             register={{...register('firstname', { required: ' ' })}}
             error={errors.firstname?.message}
           />
           <InputText
-            label="Apellido*"
+            label={t('lastname') + '*'}
             register={{...register('lastname', { required: ' ' })}}
             error={errors.lastname?.message}
           />
           <InputText
-            label="Celular"
+            label={`${t('phone')}`}
             register={{...register('phone')}}
             error={errors.phone?.message}
           />
@@ -53,18 +56,18 @@ const FormContact = () => {
               required: ' ',
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: 'Ingresa un correo válido',
+                message: t('error_email'),
               }
             })}}
             error={errors.email?.message}
           />
           <InputText
-            label="Asunto*"
+            label={`${t('subject')}*`}
             register={{...register('services', { required: ' ' })}}
             error={errors.services?.message}
           />
         </Fields>
-        <BtnContact isDisabled={Object.keys(errors).length !== 0 && isIntialited} type='submit'>ENVIAR</BtnContact>
+        <BtnContact isDisabled={Object.keys(errors).length !== 0 && isIntialited} type='submit'>{t('send')}</BtnContact>
       </form>
     </Container>
   )

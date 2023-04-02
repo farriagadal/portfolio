@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Container, BgImg, Text, BtnContact, Title } from './styles'
+import { useTranslation } from 'react-i18next'
 
-const Success = () => {
+const ErrorContact = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <Container>
@@ -11,10 +14,10 @@ const Success = () => {
         </BgImg>
         <Text>
           <Title>
-            <h2>Ha ocurrido un error</h2>
+            <h2>{t('error_1')}</h2>
           </Title>
-          <p>Por favor intente más, estamos solucionando el problema en estos momentos.</p>
-          <Link href="/"><BtnContact>VOLVER AL INICIO</BtnContact></Link>
+          <p>{t('error_2')}</p>
+          <Link href="/"><BtnContact>{t('back')}</BtnContact></Link>
         </Text>
       </Container>
     </>
@@ -22,4 +25,4 @@ const Success = () => {
   )
 }
 
-export default Success
+export default ErrorContact

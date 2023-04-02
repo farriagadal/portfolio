@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Container, BgImg, Bar, BackBtn, Text } from './styles'
+import { useTranslation } from 'react-i18next'
 
 const Heading = () => {
+  const { t } = useTranslation()
+
   return (
     <>
       <Container>
@@ -10,13 +13,13 @@ const Heading = () => {
           <Image src='/images/robot.jpg' alt="Contact Image" fill />
         </BgImg>
         <Text>
-          <h2>Conversemos</h2>
-          <p>Ofrecezco servicios de desarrollo web, desde el diseño hasta el desarrollo y el alojamiento. Soy apasionado por el código, comprometido a brindar el mejor servicio posible.</p>
+          <h2>{t('talk')}</h2>
+          <p>{t('talk_1')}</p>
         </Text>
       </Container>
       <Bar>
         <Link href="/"><BackBtn>
-          <Image src="/icons/back-arrow.svg" alt="Back" width={21} height={18} /> Volver
+          <Image src="/icons/back-arrow.svg" alt="Back" width={21} height={18} /> {t('back_1')}
         </BackBtn></Link>
       </Bar>
     </>

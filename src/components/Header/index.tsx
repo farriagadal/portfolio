@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import NavDesktop from '../NavDesktop'
 import NavMobile from '../NavMobile'
+import { useTranslation } from 'react-i18next'
 
 const Header = () => {
+  const { t } = useTranslation()
   const [isMobile, setIsMobile] = useState(false)
   const [isReady, setIsReady] = useState(false)
 
@@ -22,9 +24,9 @@ const Header = () => {
   }, [])
 
   const routes = [
-    { name: 'Inicio', href: '/' },
-    { name: '¿Quién soy?', href: '/#ourvalues', external: true },
-    { name: 'Tecnologías', href: '/#techs' , external: true }
+    { name: t('menu_home'), href: '/' },
+    { name: t('menu_about'), href: '/#ourvalues', external: true },
+    { name: t('menu_skills'), href: '/#techs' , external: true }
   ]
 
   return (

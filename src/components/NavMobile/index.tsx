@@ -4,6 +4,7 @@ import { Container, Logo, Isotipo, MenuButton, MenuList, ContactBtn, CloseBtn } 
 import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'react-i18next'
 
 type NavMobileProps = {
   routes: {
@@ -14,6 +15,7 @@ type NavMobileProps = {
 }
 
 const NavMobile = ({ routes }: NavMobileProps) => {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const router = useRouter()
 
@@ -42,7 +44,7 @@ const NavMobile = ({ routes }: NavMobileProps) => {
               ))
             }
             <Link href="/contacto"><ContactBtn>
-              <span>Contactame</span>
+              <span>{t('contact_me')}</span>
               <Image src='/icons/contact-icon.svg' alt="Contact Icon" width={16} height={16} />
             </ContactBtn></Link>
             <CloseBtn onClick={() => setOpen(false)}>
