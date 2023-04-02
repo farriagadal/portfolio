@@ -139,5 +139,12 @@ export const ContactBtn = styled.div`
   }
 `
 
-export const ThemeButton = styled.div`
+export const LangBtn = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  cursor: pointer;
+  img {
+    width: 25px;
+  }
 `

@@ -128,3 +128,20 @@ export const ContactBtn = styled.div`
     }
   }
 `
+
+export const LangBtn = styled.div`
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.1em;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 45px;
+  img {
+    width: 25px;
+    margin-left: 10px;
+  }
+`
