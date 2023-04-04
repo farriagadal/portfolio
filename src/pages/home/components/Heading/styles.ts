@@ -101,14 +101,37 @@ export const Container = styled.div`
   }
 `
 
-export const BgImg2 = styled.img`
-  position: absolute;
-  right: calc(((100vw - var(--container-width)) / 2) - 30px);
-  width: calc(var(--container-width) / 1.8);
-  top: -19%;
-  animation: float 7s infinite;
-  margin-top: 60px;
+type SvgAnimationProps = {
+  delay: number,
+  speed: number,
+}
 
+export const SvgAnimation = styled.div<SvgAnimationProps>`
+  img {
+    position: absolute;
+    right: calc(((100vw - var(--container-width)) / 2) - 30px);
+    width: calc(var(--container-width) / 1.8);
+    top: -19%;
+    animation: float ${props => props.speed}s infinite;
+    animation-delay: ${props => props.delay}s;
+    margin-top: 60px;
+
+  }
+
+  .img-original {
+    top: -18%;
+    filter: brightness(0.5);
+  }
+  .img-thick {
+    top: -19%
+  }
+  .img-shadow {
+    top: 0;
+    filter: brightness(0.1) blur(10px) opacity(0.5);
+    animation: float-shadow ${props => props.speed}s infinite;
+    animation-delay: ${props => props.delay}s;
+  }
+  
   @keyframes float {
     0% {
       transform: translateY(0px);
@@ -120,26 +143,6 @@ export const BgImg2 = styled.img`
       transform: translateY(0px);
     }
   }
-`
-
-export const BgImg = styled.img`
-  position: absolute;
-  right: calc(((100vw - var(--container-width)) / 2) - 30px);
-  width: calc(var(--container-width) / 1.8);
-  top: -18%;
-  filter: brightness(0.5);
-  animation: float 7s infinite;
-  margin-top: 60px;
-`
-
-export const BgImgShadow = styled.img`
-  position: absolute;
-  right: calc(((100vw - var(--container-width)) / 2) - 30px);
-  width: calc(var(--container-width) / 1.8);
-  top: 00px;
-  filter: brightness(0.1) blur(10px) opacity(0.5);
-  animation: float-shadow 7s infinite;
-  margin-top: 60px;
 
   @keyframes float-shadow {
     0% {

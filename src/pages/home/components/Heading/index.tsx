@@ -1,4 +1,4 @@
-import { Container, BgImg, ArrowDown, BgImgShadow, BgImg2 } from './styles'
+import { Container, SvgAnimation, ArrowDown } from './styles'
 import Image from 'next/image'
 import TextAnimation from 'src/components/TextAnimation'
 import { useTranslation } from 'react-i18next'
@@ -27,9 +27,36 @@ const Heading = () => {
             </pre>
           </p>
         </div>
-        <BgImgShadow src="images/animacion.svg" />
-        <BgImg src="images/animacion.svg" />
-        <BgImg2 src="images/animacion.svg" />
+        
+  
+        <SvgAnimation delay={4} speed={7}>
+          <img className='img-shadow' src="images/animacion-5.svg" />
+          <img className='img-original' src="images/animacion-5.svg" />
+          <img className='img-thick' src="images/animacion-5.svg" />
+        </SvgAnimation>
+        <SvgAnimation delay={2} speed={6}>
+          <img className='img-shadow' src="images/animacion-3.svg" />
+          <img className='img-original' src="images/animacion-3.svg" />
+          <img className='img-thick' src="images/animacion-3.svg" />
+        </SvgAnimation>
+        <SvgAnimation delay={3} speed={5}>
+          <img className='img-shadow' src="images/animacion-4.svg" />
+          <img className='img-original' src="images/animacion-4.svg" />
+          <img className='img-thick' src="images/animacion-4.svg" />
+        </SvgAnimation>
+   
+        <SvgAnimation delay={1} speed={4}>
+          <img className='img-shadow' src="images/animacion-2.svg" />
+          <img className='img-original' src="images/animacion-2.svg" />
+          <img className='img-thick' src="images/animacion-2.svg" />
+        </SvgAnimation>
+        <SvgAnimation delay={0} speed={3}>
+          <img className='img-shadow' src="images/animacion-1.svg" />
+          <img className='img-original' src="images/animacion-1.svg" />
+          <img className='img-thick' src="images/animacion-1.svg" />
+        </SvgAnimation>
+
+
       </Container>
       <ArrowDown href="/#ourvalues" id="ourvalues" > 
         <Image src='/icons/arrow-down.svg' alt="Arrow Down" fill />
