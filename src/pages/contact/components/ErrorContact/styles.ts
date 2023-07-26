@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 100px 0 160px 0;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     display: block;
     padding: 80px 20px 140px 20px;
   }
@@ -21,7 +21,7 @@ export const BgImg = styled.div`
   overflow: hidden;
   border-radius: 80px 0;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     width: 100%;
     min-width: initial;
     margin-bottom: 30px;
@@ -73,7 +73,7 @@ export const Text = styled.div`
   width: 100%;
   margin-left: 118px;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     margin-left: 0;
   }
 
@@ -94,7 +94,7 @@ export const Title = styled.div`
   align-items: center;
   margin-bottom: 30px;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     display: block;
   }
 
@@ -108,7 +108,7 @@ export const Title = styled.div`
     color: var(--color-3);
     max-width: 457px;
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       margin-left: 0;
       margin-top: 20px;
     }

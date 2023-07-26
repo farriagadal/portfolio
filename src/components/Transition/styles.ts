@@ -12,7 +12,7 @@ export const Container = styled.div`
   position: relative;
 
   
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     width: calc(100% - 40px);
     display: grid;
     justify-items: center;
@@ -29,7 +29,7 @@ export const Container = styled.div`
     left: 50%;
     transform: translateX(-50%);
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       bottom: 40px;
       text-align: center;
       width: 100%;
@@ -41,7 +41,7 @@ export const Icons = styled.div`
   display: flex;
   align-items: center;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     margin: 20px 0;
   }
 

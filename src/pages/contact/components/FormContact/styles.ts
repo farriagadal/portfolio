@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: 55px 0;
 
   & > h2 {
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       padding: 0 20px;
     }
   }
@@ -30,7 +30,7 @@ export const Fields = styled.div`
   column-gap: 30px;
   row-gap: 40px;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     padding: 0 20px;
   }
@@ -62,7 +62,7 @@ export const BtnContact = styled.button<BtnContactProps>`
   &:hover {
     background: var(--color-2);
   }
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     margin-left: 20px;
   }
 `

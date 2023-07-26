@@ -87,7 +87,7 @@ h3 {
   letter-spacing: 0;
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 1200px) {
   h1 {
     font-size: 56px;
     line-height: 50px;
@@ -116,7 +116,7 @@ a {
 }
 
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 1200px) {
   :root {
     --container-width: calc(100vw);
   }

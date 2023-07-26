@@ -12,7 +12,7 @@ export const Container = styled.div`
   background: var(--color-1);
   position: relative;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     padding-top: 25px;
     padding-left: 0;
     padding-bottom: 120px;
@@ -32,7 +32,7 @@ export const Container = styled.div`
     letter-spacing: 0.04em;
     max-width: 494px;
     height: 300px;
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       padding-right: 20px;
       max-width: 100%;
       height: 150px;
@@ -47,7 +47,7 @@ export const Container = styled.div`
     overflow-wrap: anywhere;
     font-size: 60px;
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       padding-right: 20px;
     }
 
@@ -175,7 +175,7 @@ export const ArrowDown = styled.a`
     animation: updown infinite 2s ease-in-out;
   }
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     margin-bottom: 80px;
   }
 

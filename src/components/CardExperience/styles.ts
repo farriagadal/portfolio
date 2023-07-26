@@ -20,7 +20,7 @@ export const Container = styled.li<ContainerProps>`
   opacity: ${(props) => (props.show ? '1' : '0')};
   transform: ${(props) => (props.show ? 'translateY(0px)' : 'translateY(-150px)')};
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     padding-left: 80px;
   }
 
@@ -30,7 +30,7 @@ export const Container = styled.li<ContainerProps>`
     left: 50px;
     margin-top: 6px;
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       left: 30px;
     }
   }

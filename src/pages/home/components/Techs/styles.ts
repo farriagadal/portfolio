@@ -15,7 +15,7 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
 
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     overflow: hidden;
     display: block;
     padding: 0px 20px 120px 20px;
@@ -30,7 +30,7 @@ export const Text = styled.div`
   z-index: 1;
   position: relative;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     margin-bottom: 60px;
     max-width: 100%;
     padding: 100px 0;
@@ -77,7 +77,7 @@ export const List = styled.div`
   top: 0;
   /* opacity: 0.5; */
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     column-gap: 24px;
     row-gap: 26px;
     transform: none;
@@ -96,7 +96,7 @@ export const Tech = styled.div`
   transition: all 0.4s linear;
   cursor: pointer;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     width: 100%;
     height: 100px;
     opacity: 0.02;
@@ -107,7 +107,7 @@ export const Tech = styled.div`
     opacity: 1;
     transform: scale(1.1) translateZ(100px);
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       transform: none;
       opacity: 0.1;
     }
@@ -122,7 +122,7 @@ export const Tech = styled.div`
     height: initial !important;
     transform: translateX(-50%) translateY(-50%) !important;
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       max-height: 50px;
     }
   }

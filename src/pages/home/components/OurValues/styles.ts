@@ -14,7 +14,7 @@ export const Section = styled.div<SectionProps>`
   margin-top: 80px;
 
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     max-height: initial;
     height: initial;
     background: none;
@@ -29,7 +29,7 @@ export const Container = styled.div`
   color: var(--color-3);
   display: flex;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     display: block;
     padding: 0 20px;
   }
@@ -55,7 +55,7 @@ export const BgImg = styled.div<BgImgProps>`
   transition: all 0.8s linear;
 
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     transform: translateY(0px);
     max-width: 100%;
     width: 100%;
@@ -72,7 +72,7 @@ export const BgImg = styled.div<BgImgProps>`
     transition: all 0.8s linear;
     cursor: pointer;
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       transform: scale(1);
     }
   }
@@ -86,7 +86,7 @@ export const Text = styled.div<TextProps>`
   margin-left: 95px;
   align-self: center;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     margin-left: 0px;
   }
 
@@ -99,7 +99,7 @@ export const Text = styled.div<TextProps>`
     text-transform: uppercase;
     color: ${(props) => (props.isActive ? 'var(--color-1)' : 'var(--color-2)')};
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       color: var(--color-2);
       margin-left: 18px;
     }
@@ -113,7 +113,7 @@ export const Text = styled.div<TextProps>`
       position: absolute;
       opacity: 0.3;
 
-      @media only screen and (max-width: 765px) {
+      @media only screen and (max-width: 1200px) {
         width: 20px;
       }
     }

@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 55px 0;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     display: block;
     padding: 55px 20px;
   }
@@ -34,7 +34,7 @@ export const BgImg = styled.div`
     z-index: 1;
   }
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     width: 100%;
     min-width: initial;
     margin-bottom: 30px;
@@ -74,7 +74,7 @@ export const Text = styled.div`
   width: 100%;
   margin-left: 118px;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     margin-left: 0;
   }
 
@@ -110,7 +110,7 @@ export const Bar = styled.div`
   margin-top: 30px;
   position: relative;
 
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     width: 100%;
     margin-top: 0;
   }
@@ -123,7 +123,7 @@ export const Bar = styled.div`
     width: 100%;
     border-bottom: 1px solid var(--color-4);
 
-    @media only screen and (max-width: 765px) {
+    @media only screen and (max-width: 1200px) {
       left: 20px;
       width: calc(100vw - 40px);
     }
@@ -150,7 +150,7 @@ export const BackBtn = styled.div`
   img {
     margin-right: 16px;
   }
-  @media only screen and (max-width: 765px) {
+  @media only screen and (max-width: 1200px) {
     padding-left: 20px;
   }
 `
