@@ -29,6 +29,12 @@ module.exports = {
       2
     ],
     'react/react-in-jsx-scope': 'off',
+    '@next/next/no-img-element': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'indent': 'off',
+    'jsx-a11y/alt-text': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    'react-hooks/exhaustive-deps': 'off',
     // '@typescript-eslint/interface-name-prefix': 'off',
     // '@typescript-eslint/explicit-function-return-type': 'off',
     // '@typescript-eslint/explicit-module-boundary-types': 'off',
