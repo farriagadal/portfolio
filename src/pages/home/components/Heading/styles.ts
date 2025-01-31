@@ -30,7 +30,7 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.04em;
-    max-width: 494px;
+    max-width: 510px;
     height: 300px;
     @media only screen and (max-width: 1200px) {
       padding-right: 20px;

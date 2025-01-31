@@ -28,33 +28,30 @@ const Heading = () => {
           </p>
         </div>
         
-  
+      <div>
         <SvgAnimation delay={4} speed={7}>
-          <img className='img-shadow' src="images/animacion-5.svg" />
           <img className='img-original' src="images/animacion-5.svg" />
           <img className='img-thick' src="images/animacion-5.svg" />
         </SvgAnimation>
         <SvgAnimation delay={2} speed={6}>
-          <img className='img-shadow' src="images/animacion-3.svg" />
           <img className='img-original' src="images/animacion-3.svg" />
           <img className='img-thick' src="images/animacion-3.svg" />
         </SvgAnimation>
         <SvgAnimation delay={3} speed={5}>
-          <img className='img-shadow' src="images/animacion-4.svg" />
           <img className='img-original' src="images/animacion-4.svg" />
           <img className='img-thick' src="images/animacion-4.svg" />
         </SvgAnimation>
    
         <SvgAnimation delay={1} speed={4}>
-          <img className='img-shadow' src="images/animacion-2.svg" />
           <img className='img-original' src="images/animacion-2.svg" />
           <img className='img-thick' src="images/animacion-2.svg" />
         </SvgAnimation>
         <SvgAnimation delay={0} speed={3}>
-          <img className='img-shadow' src="images/animacion-1.svg" />
           <img className='img-original' src="images/animacion-1.svg" />
           <img className='img-thick' src="images/animacion-1.svg" />
         </SvgAnimation>
+
+  </div>
 
 
       </Container>

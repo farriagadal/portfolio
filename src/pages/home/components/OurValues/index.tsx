@@ -5,26 +5,26 @@ import { useTranslation } from 'react-i18next'
 
 const OurValues = () => {
   const { t } = useTranslation()
-  const [isShow, setIsShow] = useState(false)
-  const [isHover, setIsHover] = useState(false)
+  // const [isShow, setIsShow] = useState(false)
+  // const [true, settrue] = useState(false)
 
-  useEffect(() => {
-    const observer: any = new IntersectionObserver(function(entries) {
-      setIsShow(entries[0].intersectionRatio === 1)
-    }, { threshold: [0, 1] })
-    observer.observe(document.querySelector('#ourvalues-label'))
-  }, [])
+  // useEffect(() => {
+  //   const observer: any = new IntersectionObserver(function(entries) {
+  //     setIsShow(entries[0].intersectionRatio === 1)
+  //   }, { threshold: [0, 1] })
+  //   observer.observe(document.querySelector('#ourvalues-label'))
+  // }, [])
 
   return (
-    <Section isActive={isHover}>
+    <Section isActive={true}>
       <Container>
-        <BgImg isActive={isHover}>
-          <Image src='/images/profile2.jpg' alt="Seedlab Fondo" fill onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} />
+        <BgImg isActive={true}>
+          <Image src='/images/profile2.jpg' alt="Seedlab Fondo" fill />
         </BgImg>
-        <Text isActive={isHover}>
+        <Text isActive={true}>
           <label id="ourvalues-label">{t('menu_about')}</label>
           <h2>{t('aboutme')}</h2>
-          <p onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+          <p>
             <pre dangerouslySetInnerHTML={{
               __html: t('aboutme_text')
             }}>

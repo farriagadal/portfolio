@@ -11,7 +11,7 @@ const Footer = () => {
       <Link href="/">
         <h2>F. Arriagada</h2>
       </Link>
-      <p>Fernando Arriagada - {t('portfolio')} 2023 - Chile</p>
+      <p>Fernando Arriagada - {t('portfolio')} 2025 - Chile</p>
       <Icons>
         <a href="https://github.com/farriagadal" target="_blank" rel="noreferrer">
           <Image src='/icons/github.svg' alt="github" width={18} height={18} />

@@ -12,7 +12,7 @@ export const Section = styled.div<SectionProps>`
   transition: max-height 0.3s linear, background 1.5s linear;
   display: grid;
   margin-top: 80px;
-
+  margin-bottom: 60px;
 
   @media only screen and (max-width: 1200px) {
     max-height: initial;
@@ -47,7 +47,7 @@ export const BgImg = styled.div<BgImgProps>`
   height: 500px;
   border-top-left-radius: 110px;
   border-bottom-right-radius: 110px;
-  background: var(--color-1);
+  background: #cc2255;
   box-shadow: 0px 30px 100px rgba(18, 7, 35, 0.1);
   z-index: 1;
 
