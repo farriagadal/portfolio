@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 
 type SectionProps = {
@@ -13,6 +14,13 @@ export const Section = styled.div<SectionProps>`
   display: grid;
   margin-top: 80px;
   margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
 
   @media only screen and (max-width: 1200px) {
     max-height: initial;
@@ -20,6 +28,26 @@ export const Section = styled.div<SectionProps>`
     background: none;
     margin-top: 0px;
     margin-bottom: 60px;
+  }
+`
+
+export const PatternBg = styled(motion.div)`
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 180%;
+  background-image: url('/icons/pattern-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+
+  @media only screen and (max-width: 1200px) {
+    opacity: 0.03;
   }
 `
 
