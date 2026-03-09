@@ -1,7 +1,7 @@
 {
   "welcome": "Bienvenido",
   "portfolio": "Portafolio Web",
-  "desc1": "Hola 👋, soy <b>Fernando Arriagada</b>, <b>Ingeniero de Software Full Stack Senior</b> con <b>6+ años</b> arquitectando soluciones escalables y liderando iniciativas técnicas. Resido en Santiago, Chile, especializado en <b>React.js, Next.js, TypeScript, Node.js, NestJS, Python, Django</b> e <b>infraestructura cloud (AWS/Azure)</b>. Experto en <b>arquitectura de microservicios, CI/CD, Docker, Kubernetes</b> y entrega de resultados de alto impacto.",
+  "desc1": "Hola 👋, soy <b>Fernando Arriagada</b>, <b>Senior Full Stack Engineer</b> con <b>8+ años</b> arquitectando soluciones escalables y liderando iniciativas técnicas. Resido en Santiago, Chile, especializado en <b>React.js, Next.js, TypeScript, Node.js, NestJS, Python, Django</b> e <b>infraestructura cloud (AWS/Azure)</b>. Experto en <b>arquitectura de microservicios, CI/CD, Docker, Kubernetes</b> y entrega de resultados de alto impacto.",
   "menu_home": "Inicio",
   "menu_about": "¿Quién soy?",
   "menu_skills": "Tecnologías",

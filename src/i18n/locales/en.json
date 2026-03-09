@@ -1,7 +1,7 @@
 {
   "welcome": "Welcome",
   "portfolio": "Web Portfolio",
-  "desc1": "Hi 👋, I'm <b>Fernando Arriagada</b>, <b>Senior Full Stack Software Engineer</b> with <b>6+ years</b> architecting scalable solutions and leading technical initiatives. Based in Santiago, Chile, specialized in <b>React.js, Next.js, TypeScript, Node.js, NestJS, Python, Django</b> and <b>cloud infrastructure (AWS/Azure)</b>. Expert in <b>microservices architecture, CI/CD, Docker, Kubernetes</b> and delivering high-impact results.",
+  "desc1": "Hi 👋, I'm <b>Fernando Arriagada</b>, <b>Senior Full Stack Engineer</b> with <b>8+ years</b> architecting scalable solutions and leading technical initiatives. Based in Santiago, Chile, specialized in <b>React.js, Next.js, TypeScript, Node.js, NestJS, Python, Django</b> and <b>cloud infrastructure (AWS/Azure)</b>. Expert in <b>microservices architecture, CI/CD, Docker, Kubernetes</b> and delivering high-impact results.",
   "menu_home": "Home",
   "menu_about": "About Me",
   "menu_skills": "Technologies",
